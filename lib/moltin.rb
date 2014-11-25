@@ -1,13 +1,37 @@
+require 'net/http'
+
 class Moltin
   
-  def self.hi
-    puts "Hello world!"
-  end
+  	@options = {
+  		"publicId" 	=> '',
+  		"auth"		=> {},
+  		"url"		=> 'https://api.molt.in/',
+  		"version"	=> 'beta',
+  		"debug"		=> false,
+  		"currency"	=> false,
+  		"methods"	=> ['GET', 'POST', 'PUT', 'DELETE']
+  	}
 
-  def self.authenticate
-  end
+	def initialize(overides)
+		# Merge the options array with the overides
+		@options = @options.zip(overides).flatten.compact
 
-  def self.request
-  end
+		# Initiate the various endpoint classes
+
+		# Check the currency value in storage
+	end
+
+	# Authenticate method
+	def self.authenticate
+	end
+
+	# Main request method
+	def self.request(uri, method = 'GET', data = null, callback, error)
+
+	end
+
+	# Private request method
+	def self.ajax
+	end
 
 end
