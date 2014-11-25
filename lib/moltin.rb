@@ -1,4 +1,3 @@
-require 'net/http'
 
 class Moltin
   
@@ -21,17 +20,12 @@ class Moltin
 		# Check the currency value in storage
 	end
 
-	# Authenticate method
+	# Authenticate against API
 	def self.authenticate
 	end
 
-	# Main request method
-	def self.request(uri, method = 'GET', data = null, callback, error)
-
-	end
-
-	# Private request method
-	def self.ajax
+	# Main method for making API requests
+	def self.fetch
 	end
 
 end
